@@ -16,9 +16,7 @@ login.click()
 response=requests.get("https://www.linkedin.com/feed/")
 htmlcontent=response.content# content alımı
 soup=BeautifulSoup(htmlcontent,"html.parser")
-element=soup.find("span",{"aria-expanded":"true","class":"hoverable-link-text"})#çalıştırabilseyidim benzeri türetip
-#  for döngüsüne girip gezdirip parse edicektim fazla hata alınca olmadı
-print(element.text.strip())
+element=soup.find("span",{"aria-expanded":"true","class":"hoverable-link-text"})
 
 time.sleep(6)
 
